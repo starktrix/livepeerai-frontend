@@ -12,6 +12,17 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      extend: {
+        keyframes: {
+          wiggle: {
+            '0%, 100%': { transform: 'rotate(-3deg)' },
+            '50%': { transform: 'rotate(30deg)' },
+          },
+        },
+        animation: {
+          wiggle: 'wiggle 2000ms ease-in-out infinite',
+        },
+      },
     },
   },
   plugins: [],
